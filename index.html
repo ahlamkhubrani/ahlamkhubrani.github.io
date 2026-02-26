@@ -5,299 +5,341 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ahlam Khubrani | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-html { scroll-behavior: smooth; }
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter', sans-serif;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
-color:#e5e7eb;
-line-height:1.8;
+background:#f6f8fc;
+color:#1e293b;
+line-height:1.7;
 }
 
 /* NAV */
-header{
+nav{
 position:fixed;
 top:0;
 width:100%;
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 80px;
-background:#0f172a;
-border-bottom:1px solid #1e293b;
 z-index:1000;
 }
 
-header a{
-color:#94a3b8;
+nav h3{
+color:#1e3a8a;
+font-weight:700;
+}
+
+nav a{
 text-decoration:none;
-margin-left:30px;
-font-size:14px;
-transition:.3s;
+margin-left:25px;
+color:#334155;
+font-weight:500;
+transition:0.3s;
 }
 
-header a:hover{
-color:#c084fc;
-}
-
-/* SECTION */
-section{
-max-width:1000px;
-margin:auto;
-padding:140px 40px 100px 40px;
+nav a:hover{
+color:#8b5cf6;
 }
 
 /* HERO */
 .hero{
-padding-top:180px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
 }
 
 .hero h1{
-font-size:48px;
-font-weight:700;
-color:white;
-margin-bottom:8px;
+font-size:46px;
+margin-bottom:15px;
+color:#1e3a8a;
+animation:fadeIn 1s ease forwards;
 }
 
-.hero h2{
-font-size:18px;
-font-weight:400;
-color:#93c5fd;
-margin-bottom:18px;
+.hero span{
+color:#8b5cf6;
 }
 
 .hero p{
-max-width:580px;
-color:#cbd5e1;
-font-size:15px;
-}
-
-.buttons{
-margin-top:30px;
+max-width:700px;
+margin:auto;
+font-size:18px;
+color:#475569;
+animation:fadeIn 1.5s ease forwards;
 }
 
 .btn{
 display:inline-block;
-padding:10px 26px;
+margin-top:30px;
+padding:12px 28px;
 border-radius:30px;
-border:1px solid #334155;
-color:#e5e7eb;
 text-decoration:none;
-font-size:14px;
-margin-right:12px;
-transition:.3s;
-}
-
-.btn:hover{
-background:#c084fc;
-border-color:#c084fc;
-color:white;
-}
-
-/* TITLES */
-.section-title{
-font-size:22px;
 font-weight:600;
-margin-bottom:30px;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#1e3a8a;
 color:white;
-position:relative;
-display:inline-block;
 }
 
-.section-title::after{
-content:"";
-display:block;
-width:35px;
-height:2px;
-background:#c084fc;
-margin-top:8px;
+.btn-primary:hover{
+background:#8b5cf6;
 }
 
-/* SKILL CARDS */
-.skills-grid{
+.btn-outline{
+border:2px solid #1e3a8a;
+color:#1e3a8a;
+margin-left:15px;
+}
+
+.btn-outline:hover{
+background:#1e3a8a;
+color:white;
+}
+
+/* SECTION */
+section{
+padding:90px 8%;
+animation:fadeUp 1s ease forwards;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+font-size:30px;
+color:#1e3a8a;
+}
+
+/* ABOUT */
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+font-size:17px;
+color:#475569;
+}
+
+/* SKILLS */
+.skills-container{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
 }
 
 .skill-card{
-background:#1e293b;
-padding:25px;
-border-radius:16px;
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
 text-align:center;
-transition:.3s;
+transition:0.3s;
 }
 
 .skill-card:hover{
-background:#273449;
-transform:translateY(-4px);
+transform:translateY(-6px);
 }
 
 .skill-card i{
-font-size:26px;
+font-size:28px;
 margin-bottom:12px;
-color:#93c5fd;
+color:#8b5cf6;
 }
 
-.skill-card h4{
-font-size:14px;
-font-weight:500;
+.skill-card h3{
+font-size:18px;
+margin-bottom:10px;
 }
 
 /* PROJECTS */
-.project{
-margin-bottom:40px;
+.projects-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.project h3{
-font-size:17px;
-color:#93c5fd;
-margin-bottom:8px;
+.project-card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+transition:0.3s;
 }
 
-.project p{
-color:#cbd5e1;
-font-size:14px;
-max-width:650px;
+.project-card:hover{
+transform:translateY(-6px);
+}
+
+.project-card h3{
+margin-bottom:10px;
+color:#1e3a8a;
 }
 
 /* CONTACT */
-.contact-link{
-display:block;
-margin-bottom:12px;
-color:#93c5fd;
+.contact{
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
 text-decoration:none;
+color:#8b5cf6;
+font-weight:600;
 }
 
-.contact-link:hover{
-color:#c084fc;
-}
-
-/* FOOTER */
 footer{
 text-align:center;
-padding:60px 0;
-font-size:13px;
+padding:25px;
+background:white;
+margin-top:60px;
 color:#64748b;
 }
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<div><strong>Ahlam Khubrani</strong></div>
+<nav>
+<h3>Ahlam Khubrani</h3>
 <div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
-</header>
+</nav>
 
+<!-- HERO -->
 <section class="hero">
-<h1>Ahlam Khubrani</h1>
-<h2>Data Analyst</h2>
-
+<div>
+<h1>Hello, I'm <span>Ahlam Khubrani</span></h1>
 <p>
-Focused on data accuracy, validation, and structured reporting.
-Reviewed and validated 2,000+ healthcare records, ensuring reliable data before analysis and dashboard development.
+Detail-oriented Data Analyst with hands-on experience in healthcare data validation and reporting. 
+Focused on transforming structured data into clear, reliable insights that support accurate decision-making.
 </p>
 
-<div class="buttons">
-<a href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank" class="btn">LinkedIn</a>
-<a href="Ahlam_Khubrani_CV.pdf" class="btn" download>Download CV</a>
+<a href="Ahlam_Khubrani_CV.pdf" class="btn btn-primary" download>Download CV</a>
+<a href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank" class="btn btn-outline">LinkedIn</a>
 </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-<h2 class="section-title">About</h2>
+<h2 class="section-title">About Me</h2>
+<div class="about">
 <p>
-Detail-oriented Data Analyst with hands-on Tamheer experience in healthcare data environments.
-Specialized in identifying inconsistencies, validating records, and improving data quality prior to reporting.
-My approach combines structure, precision, and clarity.
+During my Tamheer training in a healthcare environment, I reviewed and validated over 2,000 records, 
+ensuring data accuracy before reporting and analysis. I specialize in data cleaning, validation, 
+and structured reporting using Excel and Power BI.
 </p>
+
+<p>
+My approach combines analytical thinking, precision, and clarity to transform raw data 
+into reliable insights that decision-makers can trust.
+</p>
+</div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
 <h2 class="section-title">Core Skills</h2>
 
-<div class="skills-grid">
-
-<div class="skill-card">
-<i class="fa-solid fa-file-excel"></i>
-<h4>Excel – Data Cleaning</h4>
-</div>
-
-<div class="skill-card">
-<i class="fa-solid fa-table"></i>
-<h4>Google Sheets – Validation</h4>
-</div>
+<div class="skills-container">
 
 <div class="skill-card">
 <i class="fa-solid fa-chart-line"></i>
-<h4>Power BI – Dashboards</h4>
+<h3>Data Analysis</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-broom"></i>
+<h3>Data Cleaning</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-check-double"></i>
+<h3>Data Validation</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-file-excel"></i>
+<h3>Microsoft Excel</h3>
 </div>
 
 <div class="skill-card">
 <i class="fa-solid fa-database"></i>
-<h4>Data Reporting</h4>
+<h3>Data Reporting</h3>
 </div>
 
 <div class="skill-card">
-<i class="fa-solid fa-shield-halved"></i>
-<h4>Data Quality Assurance</h4>
+<i class="fa-solid fa-lightbulb"></i>
+<h3>Analytical Thinking</h3>
 </div>
 
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
 <h2 class="section-title">Projects</h2>
 
-<div class="project">
-<h3>Patient Data Validation System</h3>
+<div class="projects-container">
+
+<div class="project-card">
+<h3>Healthcare Data Validation</h3>
 <p>
-Designed validation logic in Google Sheets to detect incorrect entries and streamline review processes.
+Reviewed and validated patient records to enhance data integrity 
+and improve reporting reliability.
 </p>
 </div>
 
-<div class="project">
-<h3>Hospital Reporting Dashboard</h3>
+<div class="project-card">
+<h3>Power BI Dashboard</h3>
 <p>
-Built a Power BI dashboard analyzing patient distribution trends to enhance reporting clarity.
+Designed interactive dashboards to visualize trends 
+and support data-driven decisions.
 </p>
 </div>
 
+</div>
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+<section id="contact" class="contact">
 <h2 class="section-title">Contact</h2>
-
-<a class="contact-link" href="mailto:Ahlam.sal.it@outlook.com">
-Ahlam.sal.it@outlook.com
-</a>
-
-<a class="contact-link" href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank">
-LinkedIn Profile
-</a>
-
-<p>Open to Junior & Entry-Level Data Analyst Opportunities.</p>
-
+<a href="mailto:Ahlam.sal.it@outlook.com">Ahlam.sal.it@outlook.com</a>
 </section>
 
 <footer>
-© 2026 Ahlam Khubrani
+© 2026 Ahlam Khubrani | Data Analyst
 </footer>
 
 </body>
