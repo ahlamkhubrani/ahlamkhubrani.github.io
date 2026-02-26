@@ -13,178 +13,140 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#f8fbff,#eef3fb);
-    color:#1f2d3d;
+    background:#f6f8fc;
+    color:#2c2c2c;
+    line-height:1.6;
 }
 
-/* Navbar */
-nav{
+header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
-    background:#ffffff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    position:sticky;
-    top:0;
-    z-index:100;
+    padding:20px 10%;
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
-nav h2{
+.logo{
+    font-weight:700;
+    font-size:20px;
     color:#4a6cf7;
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav ul li a{
+nav a{
+    margin-left:20px;
     text-decoration:none;
-    color:#1f2d3d;
+    color:#333;
     font-weight:500;
-    transition:.3s;
 }
 
-nav ul li a:hover{
+nav a:hover{
     color:#4a6cf7;
 }
 
-/* Hero */
 .hero{
-    padding:80px 8%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
+    text-align:center;
+    padding:80px 20px 60px;
 }
 
-.hero-text{
-    flex:1;
+.profile-img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+    border:5px solid #4a6cf7;
 }
 
-.hero-text h1{
-    font-size:42px;
+.hero h1{
+    font-size:36px;
     margin-bottom:15px;
 }
 
-.hero-text h1 span{
-    color:#4a6cf7;
-}
-
-.hero-text p{
-    max-width:500px;
-    line-height:1.7;
-    margin-bottom:25px;
+.hero p{
+    max-width:700px;
+    margin:auto;
     color:#555;
+    margin-bottom:25px;
 }
 
 .btn{
     display:inline-block;
-    padding:12px 28px;
+    padding:12px 25px;
     background:#4a6cf7;
     color:white;
     border-radius:30px;
     text-decoration:none;
-    font-weight:500;
-    transition:.3s;
+    font-weight:600;
+    margin-bottom:20px;
 }
 
-.btn:hover{
-    background:#3955d3;
+.social-icons{
+    margin-top:15px;
 }
 
-/* Profile Image */
-.hero-img{
-    flex:1;
-    text-align:left;
+.social-icons a{
+    margin:0 10px;
+    font-size:20px;
+    color:#4a6cf7;
 }
 
-.hero-img img{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #4a6cf7;
-}
-
-/* Sections */
 section{
-    padding:80px 8%;
+    padding:60px 10%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:50px;
-    font-size:30px;
-    color:#4a6cf7;
+    font-size:28px;
+    margin-bottom:40px;
 }
 
-/* Skills */
-.skills-container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:25px;
 }
 
-.skill-box{
+.skill-card{
     background:white;
-    padding:30px;
-    width:200px;
-    text-align:center;
+    padding:25px;
     border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.05);
-    transition:.3s;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
 }
 
-.skill-box:hover{
+.skill-card:hover{
     transform:translateY(-5px);
 }
 
-.skill-box i{
-    font-size:28px;
-    margin-bottom:15px;
+.skill-card i{
+    font-size:30px;
     color:#4a6cf7;
+    margin-bottom:10px;
 }
 
-/* Projects */
-.project-box{
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project-card{
     background:white;
-    padding:30px;
+    padding:20px;
     border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.05);
-    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* Contact */
-.contact-icons{
-    text-align:center;
-    margin-top:20px;
-}
-
-.contact-icons a{
-    margin:0 15px;
-    font-size:22px;
-    color:#4a6cf7;
-    transition:.3s;
-}
-
-.contact-icons a:hover{
-    color:#3955d3;
-}
-
-/* Footer */
 footer{
     text-align:center;
-    padding:20px;
-    background:#ffffff;
+    padding:30px;
+    background:white;
     margin-top:40px;
     font-size:14px;
     color:#777;
@@ -194,110 +156,90 @@ footer{
 
 <body>
 
+<header>
+<div class="logo">Ahlam Khubrani</div>
 <nav>
-<h2>Ahlam Khubrani</h2>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </nav>
+</header>
 
-<section class="hero">
-<div class="hero-img">
-<img src="profile.jpg" alt="Profile">
-</div>
-
-<div class="hero-text">
-<h1>I'm <span>Ahlam Khubrani</span></h1>
+<section class="hero" id="about">
+<img src="profile.jpg" class="profile-img">
+<h1>I'm Ahlam Khubrani</h1>
 <p>
-Detail-oriented Data Analyst specialized in data validation and structured reporting. 
-Experienced in reviewing large datasets and ensuring accuracy before analysis. 
-Passionate about transforming raw data into clear insights that support confident decision-making.
+Detail-oriented Data Analyst specialized in data validation, reporting, and structured analysis.
+Experienced in handling large datasets and transforming raw information into clear, actionable insights
+that support confident decision-making.
 </p>
-
 <a href="Ahlam_Khubrani_CV.pdf" class="btn" download>Download CV</a>
-</div>
-</section>
 
-<section id="about">
-<h2 class="section-title">About Me</h2>
-<p style="text-align:center; max-width:800px; margin:auto; line-height:1.8;">
-During my Tamheer training, I worked with over 2000+ healthcare records, focusing on data validation, 
-accuracy checks, and structured reporting. I developed strong attention to detail and analytical thinking, 
-ensuring reliable datasets before building reports or dashboards.
-</p>
+<div class="social-icons" id="contact">
+<a href="tel:+966XXXXXXXXX"><i class="fa-solid fa-phone"></i></a>
+<a href="mailto:Ahlam.sal.it@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank">
+<i class="fa-brands fa-linkedin"></i></a>
+</div>
 </section>
 
 <section id="skills">
 <h2 class="section-title">Core Skills</h2>
+<div class="skills-grid">
 
-<div class="skills-container">
-<div class="skill-box">
-<i class="fas fa-chart-line"></i>
+<div class="skill-card">
+<i class="fa-solid fa-chart-line"></i>
 <h4>Data Analysis</h4>
 </div>
 
-<div class="skill-box">
-<i class="fas fa-broom"></i>
+<div class="skill-card">
+<i class="fa-solid fa-broom"></i>
 <h4>Data Cleaning</h4>
 </div>
 
-<div class="skill-box">
-<i class="fas fa-check-circle"></i>
+<div class="skill-card">
+<i class="fa-solid fa-check-circle"></i>
 <h4>Data Validation</h4>
 </div>
 
-<div class="skill-box">
-<i class="fas fa-file-excel"></i>
+<div class="skill-card">
+<i class="fa-solid fa-file-excel"></i>
 <h4>Microsoft Excel</h4>
 </div>
 
-<div class="skill-box">
-<i class="fas fa-database"></i>
+<div class="skill-card">
+<i class="fa-solid fa-database"></i>
 <h4>Data Reporting</h4>
 </div>
 
-<div class="skill-box">
-<i class="fas fa-brain"></i>
+<div class="skill-card">
+<i class="fa-solid fa-brain"></i>
 <h4>Analytical Thinking</h4>
 </div>
+
 </div>
 </section>
 
 <section id="projects">
 <h2 class="section-title">Projects</h2>
+<div class="projects">
 
-<div class="project-box">
+<div class="project-card">
 <h4>Healthcare Data Validation Project</h4>
-<p>
-Reviewed and validated patient records to ensure accuracy and consistency before reporting.
-Identified inconsistencies and improved data reliability.
-</p>
+<p>Validated and cleaned 2000+ medical records ensuring data accuracy and reporting quality.</p>
 </div>
 
-<div class="project-box">
+<div class="project-card">
 <h4>Excel Reporting Dashboard</h4>
-<p>
-Created structured Excel reports summarizing validated data, improving clarity for decision-makers.
-</p>
+<p>Built structured Excel dashboards for performance tracking and decision support.</p>
 </div>
 
-</section>
-
-<section id="contact">
-<h2 class="section-title">Contact</h2>
-
-<div class="contact-icons">
-<a href="tel:+966533259016"><i class="fas fa-phone"></i></a>
-<a href="mailto:Ahlam.sal.it@outlook.com"><i class="fas fa-envelope"></i></a>
-<a href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
 </section>
 
 <footer>
-© 2026 Ahlam Khubrani | All Rights Reserved
+© 2026 Ahlam Khubrani | Data Analyst
 </footer>
 
 </body>
