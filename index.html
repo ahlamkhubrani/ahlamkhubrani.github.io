@@ -5,21 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ahlam Khubrani | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 html { scroll-behavior: smooth; }
 
-* {
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins', sans-serif;
+font-family:'Inter', sans-serif;
 }
 
 body{
 background:#0f172a;
-color:#e2e8f0;
+color:#e5e7eb;
 line-height:1.8;
 }
 
@@ -31,49 +32,54 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:22px 70px;
+padding:20px 80px;
 background:#0f172a;
 border-bottom:1px solid #1e293b;
+z-index:1000;
 }
 
 header a{
 color:#94a3b8;
 text-decoration:none;
-margin-left:28px;
+margin-left:30px;
 font-size:14px;
 transition:.3s;
 }
 
 header a:hover{
-color:#a78bfa;
+color:#c084fc;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
-max-width:1000px;
+max-width:950px;
 margin:auto;
 padding:140px 40px 100px 40px;
 }
 
+/* HERO */
 .hero{
 padding-top:180px;
 }
 
 .hero h1{
-font-size:48px;
-font-weight:600;
-color:#f8fafc;
-margin-bottom:18px;
+font-size:50px;
+font-weight:700;
+color:white;
+margin-bottom:10px;
 }
 
-.hero span{
+.hero h2{
+font-size:18px;
+font-weight:400;
 color:#93c5fd;
+margin-bottom:20px;
 }
 
 .hero p{
-max-width:620px;
+max-width:600px;
 color:#cbd5e1;
-font-size:16px;
+font-size:15px;
 }
 
 .buttons{
@@ -85,49 +91,70 @@ display:inline-block;
 padding:10px 26px;
 border-radius:30px;
 border:1px solid #334155;
-color:#e2e8f0;
+color:#e5e7eb;
 text-decoration:none;
 font-size:14px;
-margin-right:12px;
+margin-right:15px;
 transition:.3s;
 }
 
 .btn:hover{
-background:#a78bfa;
-border-color:#a78bfa;
+background:#c084fc;
+border-color:#c084fc;
 color:white;
 }
 
 /* TITLES */
 .section-title{
-font-size:24px;
+font-size:22px;
 font-weight:600;
-margin-bottom:30px;
-color:#f1f5f9;
+margin-bottom:25px;
+color:white;
+position:relative;
+display:inline-block;
 }
 
-/* SKILLS */
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:14px;
+.section-title::after{
+content:"";
+display:block;
+width:35px;
+height:2px;
+background:#c084fc;
+margin-top:8px;
 }
 
-.skill{
+/* SKILL BARS */
+.skill-block{
+margin-bottom:25px;
+max-width:600px;
+}
+
+.skill-block p{
+margin-bottom:6px;
+font-size:14px;
+color:#e5e7eb;
+}
+
+.bar{
 background:#1e293b;
-padding:10px 18px;
-border-radius:20px;
-font-size:13px;
-color:#cbd5e1;
+height:6px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.fill{
+background:#93c5fd;
+height:6px;
+border-radius:10px;
 }
 
 /* PROJECTS */
 .project{
-margin-bottom:35px;
+margin-bottom:40px;
 }
 
 .project h3{
-font-size:18px;
+font-size:17px;
 color:#93c5fd;
 margin-bottom:8px;
 }
@@ -135,13 +162,25 @@ margin-bottom:8px;
 .project p{
 color:#cbd5e1;
 font-size:14px;
-max-width:700px;
+max-width:650px;
+}
+
+/* CONTACT */
+.contact-link{
+display:block;
+margin-bottom:12px;
+color:#93c5fd;
+text-decoration:none;
+}
+
+.contact-link:hover{
+color:#c084fc;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:50px 0;
+padding:60px 0;
 font-size:13px;
 color:#64748b;
 }
@@ -161,12 +200,12 @@ color:#64748b;
 </header>
 
 <section class="hero">
-<h1>Hi, I'm <span>Ahlam Khubrani</span></h1>
+<h1>Ahlam Khubrani</h1>
+<h2>Data Analyst</h2>
 
 <p>
-Data Analyst focused on data accuracy, validation, and structured reporting.
-I work with healthcare data to improve clarity, detect inconsistencies,
-and support data-driven decision-making.
+Focused on data accuracy, validation, and structured reporting.
+Reviewed and validated 2,000+ healthcare records, ensuring reliable data before analysis and dashboard development.
 </p>
 
 <div class="buttons">
@@ -178,21 +217,40 @@ and support data-driven decision-making.
 <section id="about">
 <h2 class="section-title">About</h2>
 <p>
-Detail-oriented Data Analyst with hands-on Tamheer training experience.
-Specialized in validating records, identifying inconsistencies, and ensuring data quality before analysis and reporting.
-Reviewed and validated 2,000+ patient records within healthcare data environments.
+Detail-oriented Data Analyst with hands-on Tamheer experience in healthcare data environments.
+Specialized in identifying inconsistencies, validating records, and improving data quality prior to reporting.
+My approach combines structure, precision, and clarity.
 </p>
 </section>
 
 <section id="skills">
 <h2 class="section-title">Core Skills</h2>
-<div class="skills">
-<div class="skill">Excel – Data Cleaning</div>
-<div class="skill">Google Sheets – Validation Rules</div>
-<div class="skill">Power BI – Dashboards</div>
-<div class="skill">Data Reporting</div>
-<div class="skill">Data Quality Assurance</div>
+
+<div class="skill-block">
+<p>Excel – Data Cleaning</p>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
 </div>
+
+<div class="skill-block">
+<p>Google Sheets – Validation Rules</p>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill-block">
+<p>Power BI – Dashboards</p>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
+</div>
+
+<div class="skill-block">
+<p>Data Reporting</p>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill-block">
+<p>Data Quality Assurance</p>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
 </section>
 
 <section id="projects">
@@ -201,7 +259,7 @@ Reviewed and validated 2,000+ patient records within healthcare data environment
 <div class="project">
 <h3>Patient Data Validation System</h3>
 <p>
-Developed validation logic in Google Sheets to detect incorrect entries and streamline review processes.
+Designed validation logic in Google Sheets to detect incorrect entries and streamline review processes.
 </p>
 </div>
 
@@ -216,7 +274,17 @@ Built a Power BI dashboard analyzing patient distribution trends to enhance repo
 
 <section id="contact">
 <h2 class="section-title">Contact</h2>
+
+<a class="contact-link" href="mailto:Ahlam.sal.it@outlook.com">
+Ahlam.sal.it@outlook.com
+</a>
+
+<a class="contact-link" href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank">
+LinkedIn Profile
+</a>
+
 <p>Open to Junior & Entry-Level Data Analyst Opportunities.</p>
+
 </section>
 
 <footer>
