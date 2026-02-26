@@ -3,80 +3,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ahlam Khubrani | Data Analyst</title>
+<title>Ahlam Salman | Data Analyst</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0b2a4a;
-    color: white;
-    text-align: center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
-.container {
-    padding: 80px 20px;
+body{
+background:#0f172a;
+color:#f1f5f9;
 }
 
-h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+section{
+padding:80px 20px;
+text-align:center;
 }
 
-h2 {
-    font-weight: normal;
-    color: #4cc9f0;
-    margin-bottom: 30px;
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
-p {
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-    color: #dcdcdc;
+.hero h1{
+font-size:52px;
+margin-bottom:10px;
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #4cc9f0;
-    color: #0b2a4a;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s;
+.hero h2{
+color:#38bdf8;
+font-size:22px;
+margin-bottom:20px;
 }
 
-.button:hover {
-    background-color: white;
+.hero p{
+max-width:650px;
+line-height:1.7;
+opacity:.85;
+margin-bottom:30px;
 }
-.footer {
-    margin-top: 60px;
-    font-size: 14px;
-    color: #aaa;
+
+.btn{
+display:inline-block;
+padding:12px 28px;
+border:2px solid #38bdf8;
+color:#38bdf8;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+margin:5px;
+}
+
+.btn:hover{
+background:#38bdf8;
+color:#0f172a;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+background:#334155;
+}
+
+.project{
+max-width:800px;
+margin:20px auto;
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+transition:.3s;
+}
+
+.project:hover{
+background:#334155;
+}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:.6;
+font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Ahlam Khubrani</h1>
-    <h2>Data Analyst</h2>
+<section class="hero">
+<h1>Ahlam Salman</h1>
+<h2>Data Analyst</h2>
 
-    <p>
-        Passionate about data validation, reporting, and transforming raw data into meaningful insights. 
-        Skilled in Excel and Power BI with hands-on experience during Tamheer training.
-    </p>
+<p>
+Detail-oriented Data Analyst with hands-on experience in healthcare data validation and reporting. 
+Reviewed and validated 2,000+ patient records during Tamheer training, ensuring data accuracy before analysis. 
+Skilled in Excel, Google Sheets, and Power BI to transform raw data into actionable insights that support informed decision-making.
+</p>
 
-    <a href="https://www.linkedin.com/in/ahlam-salman-a45772321"_blank">
-        View My LinkedIn
-    </a>
+<a class="btn" href="https://www.linkedin.com/in/ahlam-khubrani-a45772321"_blank">LinkedIn</a>
 
-    <div class="footer">
-        © 2026 Ahlam Khubrani
-    </div>
+</section>
+
+<section>
+<h3 class="section-title">Core Skills</h3>
+
+<div class="grid">
+<div class="card">Excel – Data Cleaning & Validation</div>
+<div class="card">Google Sheets – Error Detection Rules</div>
+<div class="card">Power BI – Interactive Dashboards</div>
+<div class="card">Data Reporting & Analysis</div>
+<div class="card">Data Quality Assurance</div>
+<div class="card">Healthcare Data Handling</div>
 </div>
+
+</section>
+
+<section>
+<h3 class="section-title">Projects</h3>
+
+<div class="project">
+<h4>Patient Data Validation System</h4>
+<p>
+Designed validation rules using Google Sheets formulas to detect and flag incorrect patient data entries automatically. 
+Improved reporting accuracy and reduced manual review efforts.
+</p>
+</div>
+
+<div class="project">
+<h4>Hospital Reporting Dashboard</h4>
+<p>
+Built a Power BI dashboard to analyze patient distribution across hospitals and visualize trends to support reporting and operational visibility.
+</p>
+</div>
+
+</section>
+
+<section>
+<h3 class="section-title">Experience</h3>
+
+<div class="project">
+<h4>Tamheer Trainee – Healthcare Data</h4>
+<p>
+Conducted patient data validation and supported reporting processes by reviewing 2,000+ records. 
+Collaborated in improving data accuracy before analysis and dashboard development.
+</p>
+</div>
+
+</section>
+
+<section>
+<h3 class="section-title">Contact</h3>
+<p>Open to Junior & Entry-Level Data Analyst Opportunities</p>
+</section>
+
+<footer>
+© 2026 Ahlam Salman
+</footer>
 
 </body>
 </html>
