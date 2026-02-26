@@ -52,7 +52,7 @@ color:#c084fc;
 
 /* SECTION */
 section{
-max-width:950px;
+max-width:1000px;
 margin:auto;
 padding:140px 40px 100px 40px;
 }
@@ -63,27 +63,27 @@ padding-top:180px;
 }
 
 .hero h1{
-font-size:50px;
+font-size:48px;
 font-weight:700;
 color:white;
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 .hero h2{
 font-size:18px;
 font-weight:400;
 color:#93c5fd;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .hero p{
-max-width:600px;
+max-width:580px;
 color:#cbd5e1;
 font-size:15px;
 }
 
 .buttons{
-margin-top:35px;
+margin-top:30px;
 }
 
 .btn{
@@ -94,7 +94,7 @@ border:1px solid #334155;
 color:#e5e7eb;
 text-decoration:none;
 font-size:14px;
-margin-right:15px;
+margin-right:12px;
 transition:.3s;
 }
 
@@ -108,7 +108,7 @@ color:white;
 .section-title{
 font-size:22px;
 font-weight:600;
-margin-bottom:25px;
+margin-bottom:30px;
 color:white;
 position:relative;
 display:inline-block;
@@ -123,29 +123,35 @@ background:#c084fc;
 margin-top:8px;
 }
 
-/* SKILL BARS */
-.skill-block{
-margin-bottom:25px;
-max-width:600px;
+/* SKILL CARDS */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+gap:20px;
 }
 
-.skill-block p{
-margin-bottom:6px;
-font-size:14px;
-color:#e5e7eb;
-}
-
-.bar{
+.skill-card{
 background:#1e293b;
-height:6px;
-border-radius:10px;
-overflow:hidden;
+padding:25px;
+border-radius:16px;
+text-align:center;
+transition:.3s;
 }
 
-.fill{
-background:#93c5fd;
-height:6px;
-border-radius:10px;
+.skill-card:hover{
+background:#273449;
+transform:translateY(-4px);
+}
+
+.skill-card i{
+font-size:26px;
+margin-bottom:12px;
+color:#93c5fd;
+}
+
+.skill-card h4{
+font-size:14px;
+font-weight:500;
 }
 
 /* PROJECTS */
@@ -226,31 +232,34 @@ My approach combines structure, precision, and clarity.
 <section id="skills">
 <h2 class="section-title">Core Skills</h2>
 
-<div class="skill-block">
-<p>Excel – Data Cleaning</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
+<div class="skills-grid">
+
+<div class="skill-card">
+<i class="fa-solid fa-file-excel"></i>
+<h4>Excel – Data Cleaning</h4>
 </div>
 
-<div class="skill-block">
-<p>Google Sheets – Validation Rules</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
+<div class="skill-card">
+<i class="fa-solid fa-table"></i>
+<h4>Google Sheets – Validation</h4>
 </div>
 
-<div class="skill-block">
-<p>Power BI – Dashboards</p>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
+<div class="skill-card">
+<i class="fa-solid fa-chart-line"></i>
+<h4>Power BI – Dashboards</h4>
 </div>
 
-<div class="skill-block">
-<p>Data Reporting</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
+<div class="skill-card">
+<i class="fa-solid fa-database"></i>
+<h4>Data Reporting</h4>
 </div>
 
-<div class="skill-block">
-<p>Data Quality Assurance</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
+<div class="skill-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h4>Data Quality Assurance</h4>
 </div>
 
+</div>
 </section>
 
 <section id="projects">
