@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ahlam Khubrani | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -13,13 +13,13 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Inter',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#f8faff;
-color:#1f2937;
+background:#f5f7fa;
+color:#1e293b;
 line-height:1.7;
 }
 
@@ -29,97 +29,67 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:100;
+background:#0f172a;
+color:white;
 }
 
 header h2{
-color:#4f46e5;
-font-weight:600;
+font-weight:500;
+letter-spacing:1px;
 }
 
 nav a{
 margin-left:25px;
 text-decoration:none;
-color:#374151;
-font-weight:500;
-transition:.3s;
+color:#cbd5e1;
+font-weight:400;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#4f46e5;
+color:white;
 }
 
 /* HERO */
 .hero{
-display:flex;
-flex-direction:column;
-align-items:center;
+background:#0f172a;
+color:white;
+padding:120px 20px;
 text-align:center;
-padding:110px 20px 80px;
-}
-
-.logo-circle{
-width:120px;
-height:120px;
-border-radius:50%;
-background:linear-gradient(135deg,#eef2ff,#e0e7ff);
-display:flex;
-align-items:center;
-justify-content:center;
-margin-bottom:30px;
-}
-
-.logo-circle span{
-font-size:36px;
-font-weight:600;
-letter-spacing:3px;
-color:#4f46e5;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
+font-weight:500;
 margin-bottom:15px;
-color:#111827;
+}
+
+.hero h3{
+color:#60a5fa;
+font-weight:400;
+margin-bottom:25px;
 }
 
 .hero p{
 max-width:700px;
-color:#555;
-margin-bottom:30px;
+margin:auto;
+color:#cbd5e1;
+margin-bottom:35px;
 }
 
 .btn{
 display:inline-block;
-padding:13px 32px;
-background:#4f46e5;
+padding:12px 28px;
+background:#2563eb;
 color:white;
-border-radius:30px;
+border-radius:6px;
 text-decoration:none;
-font-weight:500;
-transition:.3s;
+font-size:14px;
+transition:0.3s;
 }
 
 .btn:hover{
-background:#3730a3;
-}
-
-.contact-icons{
-margin-top:25px;
-}
-
-.contact-icons a{
-margin:0 15px;
-font-size:20px;
-color:#4f46e5;
-transition:.3s;
-}
-
-.contact-icons a:hover{
-opacity:.6;
+background:#1d4ed8;
 }
 
 /* SECTIONS */
@@ -129,9 +99,10 @@ padding:90px 8%;
 
 .section-title{
 text-align:center;
-font-size:30px;
-margin-bottom:60px;
-color:#4f46e5;
+font-size:26px;
+margin-bottom:50px;
+color:#0f172a;
+font-weight:500;
 }
 
 /* ABOUT */
@@ -139,42 +110,42 @@ color:#4f46e5;
 max-width:850px;
 margin:auto;
 text-align:center;
-color:#555;
+color:#475569;
 }
 
 /* SKILLS */
 .skills-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+gap:25px;
 max-width:1000px;
 margin:auto;
 }
 
 .skill-card{
 background:white;
-padding:35px 25px;
-border-radius:18px;
+padding:30px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
 text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
-transition:.3s;
+transition:0.3s;
 }
 
 .skill-card:hover{
-transform:translateY(-6px);
+transform:translateY(-4px);
 }
 
 .skill-card i{
-font-size:28px;
-margin-bottom:15px;
-color:#4f46e5;
+font-size:24px;
+color:#2563eb;
+margin-bottom:12px;
 }
 
 /* PROJECTS */
 .projects-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+gap:25px;
 max-width:1000px;
 margin:auto;
 }
@@ -182,31 +153,42 @@ margin:auto;
 .project-card{
 background:white;
 padding:30px;
-border-radius:18px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
-transition:.3s;
-}
-
-.project-card:hover{
-transform:translateY(-6px);
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 .project-card h4{
 margin-bottom:10px;
-color:#111827;
+color:#0f172a;
+}
+
+/* CONTACT */
+.contact-icons{
+text-align:center;
+margin-top:20px;
+}
+
+.contact-icons a{
+margin:0 15px;
+font-size:20px;
+color:#2563eb;
+transition:0.3s;
+}
+
+.contact-icons a:hover{
+color:#1d4ed8;
 }
 
 /* FOOTER */
 footer{
+background:#0f172a;
+color:#cbd5e1;
 text-align:center;
 padding:40px;
-background:white;
 margin-top:80px;
-color:#777;
 font-size:14px;
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
 header{
 flex-direction:column;
@@ -232,33 +214,24 @@ margin-top:10px;
 </header>
 
 <section class="hero">
-
-<div class="logo-circle">
-<span>AK</span>
-</div>
-
 <h1>Data Analyst</h1>
+<h3>Structured. Accurate. Insight-Driven.</h3>
 
 <p>
-I transform structured data into clear, reliable insights that support confident decision-making. 
-My focus is on precision, organization, and delivering meaningful results through clean analysis.
+I focus on delivering clear and reliable analysis through structured data validation 
+and organized reporting. My approach emphasizes accuracy, consistency, and meaningful insights 
+that support confident decision-making in data-driven environments.
 </p>
 
-<div class="contact-icons">
-<a href="tel:+966XXXXXXXXX"><i class="fa-solid fa-phone"></i></a>
-<a href="mailto:Ahlam.sal.it@outlook.com"><i class="fa-solid fa-envelope"></i></a>
-<a href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank">
-<i class="fa-brands fa-linkedin"></i></a>
-</div>
-
+<a href="Ahlam_Khubrani_CV.pdf" class="btn" download>Download CV</a>
 </section>
 
 <section id="about">
-<h2 class="section-title">About Me</h2>
+<h2 class="section-title">About</h2>
 <div class="about">
-I approach data with structure and attention to detail. My work focuses on improving accuracy, 
-ensuring consistency, and presenting information clearly. I value organized processes and 
-continuous learning within data-driven environments.
+I work with structured datasets, prioritizing data quality, validation, and reporting clarity. 
+My focus is on building organized processes that ensure consistency and support effective analysis. 
+I am committed to continuous learning and professional growth within analytical environments.
 </div>
 </section>
 
@@ -266,20 +239,19 @@ continuous learning within data-driven environments.
 <h2 class="section-title">Core Skills</h2>
 
 <div class="skills-grid">
-
 <div class="skill-card">
 <i class="fa-solid fa-chart-line"></i>
 <h4>Data Analysis</h4>
 </div>
 
 <div class="skill-card">
-<i class="fa-solid fa-broom"></i>
-<h4>Data Cleaning</h4>
+<i class="fa-solid fa-check-circle"></i>
+<h4>Data Validation</h4>
 </div>
 
 <div class="skill-card">
-<i class="fa-solid fa-check-circle"></i>
-<h4>Data Validation</h4>
+<i class="fa-solid fa-broom"></i>
+<h4>Data Cleaning</h4>
 </div>
 
 <div class="skill-card">
@@ -296,7 +268,6 @@ continuous learning within data-driven environments.
 <i class="fa-solid fa-brain"></i>
 <h4>Analytical Thinking</h4>
 </div>
-
 </div>
 </section>
 
@@ -304,17 +275,25 @@ continuous learning within data-driven environments.
 <h2 class="section-title">Projects</h2>
 
 <div class="projects-grid">
-
 <div class="project-card">
 <h4>Healthcare Data Validation</h4>
-<p>Reviewed and refined structured datasets to improve consistency and reporting quality.</p>
+<p>Improved data consistency and reporting accuracy through structured validation processes.</p>
 </div>
 
 <div class="project-card">
 <h4>Excel Reporting Dashboard</h4>
-<p>Designed organized reporting sheets to support clearer performance tracking.</p>
+<p>Developed organized reporting sheets to support clearer performance tracking and analysis.</p>
 </div>
+</div>
+</section>
 
+<section>
+<h2 class="section-title">Contact</h2>
+<div class="contact-icons">
+<a href="tel:+966XXXXXXXXX"><i class="fa-solid fa-phone"></i></a>
+<a href="mailto:Ahlam.sal.it@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank">
+<i class="fa-brands fa-linkedin"></i></a>
 </div>
 </section>
 
