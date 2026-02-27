@@ -1,342 +1,302 @@
+> قناتي🦦🤎:
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ahlam Khubrani | Data Analyst</title>
+<title>Ahlam Khubrani | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
-color:#1e293b;
-line-height:1.7;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:#f1f5f9;
 }
 
-/* HEADER */
-header{
+/* NAV */
+nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
 background:#0f172a;
-color:white;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
 }
 
-header h2{
-font-weight:500;
-letter-spacing:1px;
+nav .logo{
+font-weight:600;
+font-size:18px;
+color:#93c5fd;
 }
 
-nav a{
-margin-left:25px;
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+color:#e2e8f0;
 text-decoration:none;
-color:#cbd5e1;
-font-weight:400;
-transition:0.3s;
+font-size:14px;
+transition:.3s;
 }
 
-nav a:hover{
-color:white;
+nav ul li a:hover{
+color:#93c5fd;
 }
 
 /* HERO */
 .hero{
-background:#0f172a;
-color:white;
-padding:120px 20px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+padding:120px 20px 60px;
+}
+
+.profile-img{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #3b82f6;
+margin-bottom:25px;
 }
 
 .hero h1{
-font-size:42px;
-font-weight:500;
+font-size:32px;
 margin-bottom:15px;
-animation: fadeHero 1s ease forwards;
 }
 
-.hero h3{
+.hero h1 span{
 color:#60a5fa;
-font-weight:400;
-margin-bottom:25px;
-animation: fadeHero 1.2s ease forwards;
 }
 
 .hero p{
-max-width:700px;
-margin:auto;
+max-width:650px;
+line-height:1.7;
 color:#cbd5e1;
-animation: fadeHero 1.4s ease forwards;
+margin-bottom:25px;
 }
 
-@keyframes fadeHero {
-from {opacity:0; transform:translateY(20px);}
-to {opacity:1; transform:translateY(0);}
+.btn{
+display:inline-block;
+padding:10px 28px;
+background:#2563eb;
+color:#fff;
+border-radius:25px;
+text-decoration:none;
+transition:.3s;
 }
 
-/* SECTIONS */
+.btn:hover{
+background:#1d4ed8;
+}
+
+/* SECTION */
 section{
-padding:90px 8%;
+padding:80px 8%;
+text-align:center;
 }
 
-.section-title{
-text-align:center;
+section h2{
+margin-bottom:40px;
 font-size:26px;
-margin-bottom:50px;
-color:#0f172a;
-font-weight:500;
-}
-
-/* Fade-in */
-.fade-in{
-opacity:0;
-transform:translateY(30px);
-transition:all 0.8s ease;
-}
-
-.fade-in.visible{
-opacity:1;
-transform:translateY(0);
-}
-
-/* ABOUT */
-.about{
-max-width:850px;
-margin:auto;
-text-align:center;
-color:#475569;
+color:#93c5fd;
 }
 
 /* SKILLS */
-.skills-grid{
+.skills-container{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:25px;
-max-width:1000px;
-margin:auto;
 }
 
 .skill-card{
-background:white;
-padding:30px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
-text-align:center;
-transition:all 0.3s ease;
+background:#1e293b;
+padding:30px 15px;
+border-radius:12px;
+transition:.3s;
 }
 
 .skill-card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transform:translateY(-5px);
+background:#334155;
 }
 
 .skill-card i{
-font-size:24px;
-color:#2563eb;
-margin-bottom:12px;
+font-size:30px;
+color:#60a5fa;
+margin-bottom:15px;
 }
 
-/* PROJECTS */
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-max-width:1000px;
-margin:auto;
+.skill-card h4{
+font-size:15px;
 }
 
+/* PROJECT */
 .project-card{
-background:white;
+background:#1e293b;
 padding:30px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
-transition:all 0.3s ease;
-}
-
-.project-card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.project-card h4{
-margin-bottom:10px;
-color:#0f172a;
-}
-
-/* CV SECTION */
-.cv-section{
-text-align:center;
-background:#0f172a;
-color:white;
-padding:70px 20px;
-}
-
-.cv-section a{
-display:inline-block;
-padding:12px 28px;
-background:#2563eb;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-size:14px;
-transition:all 0.3s ease;
-position:relative;
-overflow:hidden;
-}
-
-.cv-section a::after{
-content:"";
-position:absolute;
-left:0;
-top:0;
-width:0%;
-height:100%;
-background:rgba(255,255,255,0.15);
-transition:width 0.4s ease;
-}
-
-.cv-section a:hover::after{
-width:100%;
+border-radius:15px;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#cbd5e1;
 }
 
 /* CONTACT */
+.contact{
+background:#0f172a;
+padding:40px 0;
+}
+
 .contact-icons{
-text-align:center;
-margin-top:20px;
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:15px;
 }
 
 .contact-icons a{
-margin:0 15px;
-font-size:20px;
-color:#2563eb;
-transition:0.3s;
+color:#93c5fd;
+font-size:22px;
+transition:.3s;
 }
 
 .contact-icons a:hover{
-color:#1d4ed8;
+color:#60a5fa;
 }
 
-/* FOOTER */
 footer{
-background:#0f172a;
-color:#cbd5e1;
 text-align:center;
-padding:40px;
-font-size:14px;
+padding:20px 0;
+font-size:13px;
+color:#94a3b8;
+background:#0f172a;
 }
 
-@media(max-width:768px){
-header{
-flex-direction:column;
-gap:10px;
-}
-nav{
-margin-top:10px;
-}
-}
 </style>
 </head>
 
 <body>
 
-<header>
-<h2>Ahlam Khubrani</h2>
 <nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
+<div class="logo">Welcome</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
-</header>
 
-<section class="hero">
-<h1>Data Analyst</h1>
-<h3>Structured. Accurate. Insight-Driven.</h3>
+<!-- HERO -->
+<section class="hero" id="about">
+
+<img src="profile.jpg" class="profile-img">
+
+<h1>I’m <span>Ahlam Khubrani</span></h1>
+
 <p>
-I focus on delivering clear and reliable analysis through structured data validation 
-and organized reporting. My approach emphasizes accuracy, consistency, and meaningful insights 
-that support confident decision-making in data-driven environments.
+Information Technology graduate with strong interest in Data Analysis and system improvement. 
+I focus on transforming structured data into clear insights that support confident decision-making 
+and improve digital processes.
 </p>
+
+<a href="Ahlam_Khubrani_CV.pdf" class="btn" download>Download CV</a>
+
 </section>
 
-<section id="about" class="fade-in">
-<h2 class="section-title">About</h2>
-<div class="about">
-I am an Information Technology graduate with a strong academic foundation and a focus on analytical problem-solving. 
-My background equipped me with structured thinking, technical understanding of databases, and the ability to evaluate systems with precision.
+<!-- SKILLS -->
+<section id="skills">
+<h2>Core Skills</h2>
 
-Recognized for academic excellence, I developed a disciplined approach to delivering high-quality work. 
-I am particularly interested in data validation, reporting accuracy, and transforming structured information into meaningful insights that support informed decision-making.
+<div class="skills-container">
+
+<div class="skill-card">
+<i class="fa-solid fa-chart-line"></i>
+<h4>Data Analysis</h4>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-broom"></i>
+<h4>Data Cleaning</h4>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-check-circle"></i>
+<h4>Data Validation</h4>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-file-excel"></i>
+<h4>Microsoft Excel</h4>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-database"></i>
+<h4>Database Management</h4>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-brain"></i>
+<h4>Analytical Thinking</h4>
+</div>
+
 </div>
 </section>
 
-<section id="skills" class="fade-in">
-<h2 class="section-title">Core Skills</h2>
-<div class="skills-grid">
-<div class="skill-card"><i class="fa-solid fa-chart-line"></i><h4>Data Analysis</h4></div>
-<div class="skill-card"><i class="fa-solid fa-check-circle"></i><h4>Data Validation</h4></div>
-<div class="skill-card"><i class="fa-solid fa-broom"></i><h4>Data Cleaning</h4></div>
-<div class="skill-card"><i class="fa-solid fa-file-excel"></i><h4>Microsoft Excel</h4></div>
-<div class="skill-card"><i class="fa-solid fa-database"></i><h4>Data Reporting</h4></div>
-<div class="skill-card"><i class="fa-solid fa-brain"></i><h4>Analytical Thinking</h4></div>
-</div>
-</section>
+<!-- PROJECT -->
+<section id="projects">
+<h2>Graduation Project</h2>
 
-<section id="projects" class="fade-in">
-<h2 class="section-title">Projects</h2>
-<div class="projects-grid">
+> قناتي🦦🤎:
 <div class="project-card">
-<h4>Healthcare Data Validation</h4>
-<p>Improved data consistency and reporting accuracy through structured validation processes.</p>
+<h3>JU Recommendation Website</h3>
+<p>
+A web-based system developed to streamline recommendation requests between students and faculty members. 
+The system was built using HTML, CSS, JavaScript, PHP, and MySQL. 
+I contributed to requirements analysis, database design (ERD), system modeling, and implementation. 
+The project improved communication efficiency and organized academic recommendation processes.
+</p>
 </div>
-<div class="project-card">
-<h4>Excel Reporting Dashboard</h4>
-<p>Developed organized reporting sheets to support clearer performance tracking and analysis.</p>
-</div>
-</div>
+
 </section>
 
-<section class="cv-section fade-in">
-<h2 style="margin-bottom:20px;">Download CV</h2>
-<a href="Ahlam_Khubrani_CV.pdf" download>Download CV</a>
-</section>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2>Contact</h2>
 
-<section id="contact" class="fade-in">
-<h2 class="section-title">Contact</h2>
 <div class="contact-icons">
-<a href="tel:+966XXXXXXXXX"><i class="fa-solid fa-phone"></i></a>
+<a href="tel:+966533259016"><i class="fa-solid fa-phone"></i></a>
 <a href="mailto:Ahlam.sal.it@outlook.com"><i class="fa-solid fa-envelope"></i></a>
 <a href="https://www.linkedin.com/in/ahlam-khubrani-a45772321" target="_blank">
 <i class="fa-brands fa-linkedin"></i></a>
 </div>
+
 </section>
 
 <footer>
-© 2026 Ahlam Khubrani | Data Analyst
+© 2026 Ahlam Khubrani | Portfolio
 </footer>
-
-<script>
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-}
-});
-},{threshold:0.2});
-
-document.querySelectorAll('.fade-in').forEach(el=>{
-observer.observe(el);
-});
-</script>
 
 </body>
 </html>
