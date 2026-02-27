@@ -62,34 +62,26 @@ text-align:center;
 font-size:42px;
 font-weight:500;
 margin-bottom:15px;
+animation: fadeHero 1s ease forwards;
 }
 
 .hero h3{
 color:#60a5fa;
 font-weight:400;
 margin-bottom:25px;
+animation: fadeHero 1.2s ease forwards;
 }
 
 .hero p{
 max-width:700px;
 margin:auto;
 color:#cbd5e1;
-margin-bottom:35px;
+animation: fadeHero 1.4s ease forwards;
 }
 
-.btn{
-display:inline-block;
-padding:12px 28px;
-background:#2563eb;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-size:14px;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#1d4ed8;
+@keyframes fadeHero {
+from {opacity:0; transform:translateY(20px);}
+to {opacity:1; transform:translateY(0);}
 }
 
 /* SECTIONS */
@@ -103,6 +95,18 @@ font-size:26px;
 margin-bottom:50px;
 color:#0f172a;
 font-weight:500;
+}
+
+/* Fade-in */
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* ABOUT */
@@ -128,11 +132,12 @@ padding:30px;
 border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
 text-align:center;
-transition:0.3s;
+transition:all 0.3s ease;
 }
 
 .skill-card:hover{
-transform:translateY(-4px);
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .skill-card i{
@@ -155,11 +160,53 @@ background:white;
 padding:30px;
 border-radius:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:all 0.3s ease;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .project-card h4{
 margin-bottom:10px;
 color:#0f172a;
+}
+
+/* CV SECTION */
+.cv-section{
+text-align:center;
+background:#0f172a;
+color:white;
+padding:70px 20px;
+}
+
+.cv-section a{
+display:inline-block;
+padding:12px 28px;
+background:#2563eb;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+transition:all 0.3s ease;
+position:relative;
+overflow:hidden;
+}
+
+.cv-section a::after{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:0%;
+height:100%;
+background:rgba(255,255,255,0.15);
+transition:width 0.4s ease;
+}
+
+.cv-section a:hover::after{
+width:100%;
 }
 
 /* CONTACT */
@@ -185,7 +232,6 @@ background:#0f172a;
 color:#cbd5e1;
 text-align:center;
 padding:40px;
-margin-top:80px;
 font-size:14px;
 }
 
@@ -209,77 +255,49 @@ margin-top:10px;
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="Ahlam_Khubrani_CV.pdf" download>Download CV</a>
 </nav>
 </header>
 
 <section class="hero">
 <h1>Data Analyst</h1>
 <h3>Structured. Accurate. Insight-Driven.</h3>
-
 <p>
 I focus on delivering clear and reliable analysis through structured data validation 
 and organized reporting. My approach emphasizes accuracy, consistency, and meaningful insights 
 that support confident decision-making in data-driven environments.
 </p>
-
-<a href="Ahlam_Khubrani_CV.pdf" class="btn" download>Download CV</a>
 </section>
 
-<section id="about">
+<section id="about" class="fade-in">
 <h2 class="section-title">About</h2>
 <div class="about">
-I work with structured datasets, prioritizing data quality, validation, and reporting clarity. 
-My focus is on building organized processes that ensure consistency and support effective analysis. 
-I am committed to continuous learning and professional growth within analytical environments.
+I am an Information Technology graduate with a strong academic foundation and a focus on analytical problem-solving. 
+My background equipped me with structured thinking, technical understanding of databases, and the ability to evaluate systems with precision.
+
+Recognized for academic excellence, I developed a disciplined approach to delivering high-quality work. 
+I am particularly interested in data validation, reporting accuracy, and transforming structured information into meaningful insights that support informed decision-making.
 </div>
 </section>
 
-<section id="skills">
+<section id="skills" class="fade-in">
 <h2 class="section-title">Core Skills</h2>
-
 <div class="skills-grid">
-<div class="skill-card">
-<i class="fa-solid fa-chart-line"></i>
-<h4>Data Analysis</h4>
-</div>
-
-<div class="skill-card">
-<i class="fa-solid fa-check-circle"></i>
-<h4>Data Validation</h4>
-</div>
-
-<div class="skill-card">
-<i class="fa-solid fa-broom"></i>
-<h4>Data Cleaning</h4>
-</div>
-
-<div class="skill-card">
-<i class="fa-solid fa-file-excel"></i>
-<h4>Microsoft Excel</h4>
-</div>
-
-<div class="skill-card">
-<i class="fa-solid fa-database"></i>
-<h4>Data Reporting</h4>
-</div>
-
-<div class="skill-card">
-<i class="fa-solid fa-brain"></i>
-<h4>Analytical Thinking</h4>
-</div>
+<div class="skill-card"><i class="fa-solid fa-chart-line"></i><h4>Data Analysis</h4></div>
+<div class="skill-card"><i class="fa-solid fa-check-circle"></i><h4>Data Validation</h4></div>
+<div class="skill-card"><i class="fa-solid fa-broom"></i><h4>Data Cleaning</h4></div>
+<div class="skill-card"><i class="fa-solid fa-file-excel"></i><h4>Microsoft Excel</h4></div>
+<div class="skill-card"><i class="fa-solid fa-database"></i><h4>Data Reporting</h4></div>
+<div class="skill-card"><i class="fa-solid fa-brain"></i><h4>Analytical Thinking</h4></div>
 </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="fade-in">
 <h2 class="section-title">Projects</h2>
-
 <div class="projects-grid">
 <div class="project-card">
 <h4>Healthcare Data Validation</h4>
 <p>Improved data consistency and reporting accuracy through structured validation processes.</p>
 </div>
-
 <div class="project-card">
 <h4>Excel Reporting Dashboard</h4>
 <p>Developed organized reporting sheets to support clearer performance tracking and analysis.</p>
@@ -287,7 +305,12 @@ I am committed to continuous learning and professional growth within analytical 
 </div>
 </section>
 
-<section>
+<section class="cv-section fade-in">
+<h2 style="margin-bottom:20px;">Download CV</h2>
+<a href="Ahlam_Khubrani_CV.pdf" download>Download CV</a>
+</section>
+
+<section id="contact" class="fade-in">
 <h2 class="section-title">Contact</h2>
 <div class="contact-icons">
 <a href="tel:+966XXXXXXXXX"><i class="fa-solid fa-phone"></i></a>
@@ -300,6 +323,20 @@ I am committed to continuous learning and professional growth within analytical 
 <footer>
 © 2026 Ahlam Khubrani | Data Analyst
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+},{threshold:0.2});
+
+document.querySelectorAll('.fade-in').forEach(el=>{
+observer.observe(el);
+});
+</script>
 
 </body>
 </html>
